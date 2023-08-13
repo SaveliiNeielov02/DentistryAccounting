@@ -1,0 +1,89 @@
+﻿/* Стили для формы */
+form {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px; /* Увеличение максимальной ширины формы */
+    /* width: 300px;*/
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Стили для подписей */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Стили для полей ввода */
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Стили для кнопки */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+#description {
+    max-width: 600px;
+}
+
+a {
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+    margin: 15px;
+}
+
+    a:hover {
+        text-decoration: underline; /* Подчеркивание при наведении */
+    }
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.tooth-row {
+    display: flex;
+    justify-content: center;
+}
+
+.tooth-button {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+    .tooth-button.hovered {
+        background-color: #e0e0e0;
+    }
+
+    /* Стили для зубов при клике */
+    .tooth-button.clicked {
+        background-color: #ff9900;
+        color: white;
+    }

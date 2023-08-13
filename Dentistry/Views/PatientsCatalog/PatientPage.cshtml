@@ -1,0 +1,23 @@
+﻿@model List<Patient>
+
+<link rel="stylesheet" href="~/css/PatientPage.css" />
+<script src="~/js/PatientPage.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div id="patientsData" data-patients='@Html.Raw(Json.Serialize(Model.Select(_ => _.ReceptionID).ToList()))'></div>
+
+
+@{
+    Layout = null;
+}
+<a href="/">Вернуться к списку пациентов</a>
+<div class="initials">
+    <span>@Model.First().Name @Model.First().Surname</span>
+    <span>@Model.First().Patronymic</span>
+</div>
+<div class="patient-details">
+    <span>Номер телефона: @Model.First().PhoneNumber</span>
+    <span>Количество посещений: @Model.Count()</span>
+    <div class="teeth">
+        <span style="font-weight: bold;">Обработанные зубы:</span>
+    </div>
+</div>

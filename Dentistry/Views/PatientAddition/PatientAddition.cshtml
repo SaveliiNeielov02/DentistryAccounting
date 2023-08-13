@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/PatientAddition.css" />
+<script src="~/js/PatientAddition.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+   
+</style>
+<a href="/">Вернуться к списку пациентов</a>
+<h2>Добавление нового пациента</h2>
+<form>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="surName">Фамилия:</label>
+    <input type="text" id="surName" required>
+    <br>
+    <label for="patronymic">Отчество:</label>
+    <input type="text" id="patronymic">
+    <br>
+    <label for="phoneNumber">Номер телефона:</label>
+    <input type="text" id="phoneNumber">
+    <br>
+    <label for="type">Тип операции:</label>
+    <select id="type" required>
+        <option>Пломбирование</option>
+        <option>Полное, частичное удаление зубов</option>
+        <option>Имплантация</option>
+        <option>Пластика десны</option>
+
+    </select>
+    <br>
+    <div class="teeth">
+        <span style="font-weight: bold;">Операция над зубом/зубами:</span>
+    </div>
+    <label for="description">Заметки:</label>
+    <textarea id="description"></textarea>
+    <br>
+    <input type="submit" value="Добавить" onclick="addData(event)">
+</form>

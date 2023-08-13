@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Patient> 
+<h1 id="catalogName">Список пациентов</h1>
+<div class="patients-wrapper">
+    @foreach (var patient in Model)
+    {
+        <div class="patient" id="@patient.ID" onclick="onPatientClick(@patient.ID)">
+            <div>
+                <span>@patient.Name @patient.Surname</span>
+                <span>@patient.Patronymic</span>
+            </div>
+            <span class="additional-info">@patient.PhoneNumber. Количество приемов: @Model.Where(_ => _.PhoneNumber == patient.PhoneNumber &&
+                _.Name == patient.Name).Count()</span>
+        </div>
+    }
+</div>
+<script>
+    function onPatientClick(ID) {
+        window.location.href = '/PatientsCatalog/' + ID;
+    }
+</script>

@@ -1,0 +1,44 @@
+﻿
+body {
+/*    background-image: url("https://img.freepik.com/premium-photo/abstract-black-background-dark-blue-background-for-graphic-design-and-web-design_900706-8562.jpg");
+*/    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.left-div {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.right-div {
+    background-color: lightblue;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input {
+    flex-grow: 1;
+    margin-right: 20px;
+    padding: 13px;
+    font-size: 18px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+    .btn:hover {
+        background-color: #45a049;
+    }
